@@ -44,7 +44,7 @@ public static void Logain()
         static int turn = 0;
         static void Main(string[] args)
         {
-Logain
+Logain();
             int player = 2; // Player 1 starts
             int input = 0;
             bool inputCorrect = true;
