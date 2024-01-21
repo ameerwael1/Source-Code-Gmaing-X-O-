@@ -4,7 +4,25 @@ namespace test_app
 {
     class Program
     {
+public static void Logain()
+        {
+            Console.WriteLine("Enter Username");
+            String username = Console.ReadLine();
+            Console.WriteLine("Enter Password");
+            String password = Console.ReadLine();
+            if (username == "Admin" && password == "Admin")
+            {
+              
+                setfelid();
+                Console.WriteLine("Succes Login");
 
+            }
+            else 
+            {
+                Console.Clear();
+                Console.WriteLine("Erorr Please Check username or password");
+
+            }
         
         static char[,] playField =
            {
@@ -26,7 +44,7 @@ namespace test_app
         static int turn = 0;
         static void Main(string[] args)
         {
-
+Logain
             int player = 2; // Player 1 starts
             int input = 0;
             bool inputCorrect = true;
@@ -111,6 +129,7 @@ namespace test_app
               
                 do
                 {
+                    Logain();
                     Console.WriteLine("\nplayer {0} : Choose your Filed : ",player);
 
                     try
