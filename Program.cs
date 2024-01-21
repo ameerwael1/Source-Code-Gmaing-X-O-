@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 // by : Amir wael
 namespace test_app
 {
     class Program
     {
-public static void Logain()
+        public static void Logain()
         {
             Console.WriteLine("Enter Username");
             String username = Console.ReadLine();
@@ -23,7 +23,8 @@ public static void Logain()
                 Console.WriteLine("Erorr Please Check username or password");
 
             }
-        
+        }
+
         static char[,] playField =
            {
 
@@ -44,14 +45,13 @@ public static void Logain()
         static int turn = 0;
         static void Main(string[] args)
         {
-Logain();
+            Logain();
             int player = 2; // Player 1 starts
             int input = 0;
             bool inputCorrect = true;
 
 
 
-                                                                                                                                     
 
 
 
@@ -60,13 +60,14 @@ Logain();
 
 
 
-           // setfelid();
-          //  Console.ReadKey();
 
+            // setfelid();
+            //  Console.ReadKey();
 
+         
             do
             {
-               
+
                 if (player == 2)
                 {
                     player = 1;
@@ -79,9 +80,10 @@ Logain();
                     player = 2;
                     EnterXo(player, input);
                 }
-                setfelid();
+                
+               // setfelid();
 
-                // check winning condition
+                                 // check winning condition
                 char[] playerwinerr = { 'X', 'O' };
 
                 foreach (char playerwin in playerwinerr)
@@ -94,10 +96,10 @@ Logain();
                         || ((playField[0, 2] == playerwin) && (playField[1, 2] == playerwin) && (playField[2, 2] == playerwin))
                         || ((playField[0, 0] == playerwin) && (playField[1, 1] == playerwin) && (playField[2, 2] == playerwin))
                         || ((playField[0, 2] == playerwin) && (playField[1, 1] == playerwin) && (playField[2, 0] == playerwin))
-                        
+
                         )
                     {
-                        if(playerwin == 'X')
+                        if (playerwin == 'X')
                         {
 
                             Console.WriteLine("\n player 2 is win");
@@ -119,18 +121,18 @@ Logain();
                         ResetFiled();
                         break;
                     }
-                    
 
-                       
+
+
 
 
                 }
 
-              
+
                 do
                 {
                     Logain();
-                    Console.WriteLine("\nplayer {0} : Choose your Filed : ",player);
+                    Console.WriteLine("\nplayer {0} : Choose your Filed : ", player);
 
                     try
                     {
@@ -139,7 +141,7 @@ Logain();
                     }
                     catch
                     {
-                      
+
                         Console.WriteLine("Erorr Please Enter number");
                         Console.Read();
                     }
@@ -177,7 +179,7 @@ Logain();
 
 
 
-         
+
 
 
 
@@ -199,27 +201,27 @@ Logain();
         }
         public static void setfelid()
         {
-          
+
             Console.Clear();
             //TODO replace numbers with variebles
             Console.WriteLine(" -------------------------------------------------------------------                                                @ Copy Right Ameer Wael");
             Console.WriteLine(" -------------------------------------------------------------------                                                                 ");
 
 
-            Console.WriteLine("  {0}  |  {1}  |  {2}",playField[0, 0], playField[0, 1], playField[0, 2]);
+            Console.WriteLine("  {0}  |  {1}  |  {2}", playField[0, 0], playField[0, 1], playField[0, 2]);
             Console.WriteLine("_____|_____|_____");
             Console.WriteLine("     |     |     ");
             //TODO replace numbers with variebles
-            Console.WriteLine("  {0}  |  {1}  |  {2}",playField[1, 0], playField[1, 1], playField[1, 2]);
+            Console.WriteLine("  {0}  |  {1}  |  {2}", playField[1, 0], playField[1, 1], playField[1, 2]);
             Console.WriteLine("_____|_____|_____");
             Console.WriteLine("     |     |     ");
             //TODO replace numbers with variebles
-            Console.WriteLine("  {0}  |  {1}  |  {2}",playField[2, 0], playField[2, 1], playField[2, 2]);
+            Console.WriteLine("  {0}  |  {1}  |  {2}", playField[2, 0], playField[2, 1], playField[2, 2]);
             Console.WriteLine("     |     |     ");
             turn++;
 
-        } 
-       public static void EnterXo(int player , int input)
+        }
+        public static void EnterXo(int player, int input)
         {
             char playersign = ' ';
             if (player == 1)
@@ -227,8 +229,8 @@ Logain();
             else if (player == 2)
                 playersign = 'O';
 
-              //player1 turn
-                        {
+            //player1 turn
+            {
                 switch (input)
                 {
                     case 1: playField[0, 0] = playersign; break;
@@ -241,12 +243,13 @@ Logain();
                     case 8: playField[2, 1] = playersign; break;
                     case 9: playField[2, 2] = playersign; break;
                 }
-                
+
             }
 
-           
-// @ Copy Right >> Amir wael
+
+            // @ Copy Right >> Amir wael
         }
     }
 }
+
 
