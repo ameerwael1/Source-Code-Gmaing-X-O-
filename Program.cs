@@ -1,6 +1,6 @@
 using System;
 // by : Amir wael
-namespace test_app
+namespace GmaingXO
 {
     class Program
     {
