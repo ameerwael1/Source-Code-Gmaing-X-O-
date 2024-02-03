@@ -4,7 +4,7 @@ namespace GmaingXO
 {
     class Program
     {
-        public static void Logain()
+        public static void login()
         {
             Console.WriteLine("Enter Username");
             String username = Console.ReadLine();
@@ -45,7 +45,7 @@ namespace GmaingXO
         static int turn = 0;
         static void Main(string[] args)
         {
-            Logain();
+           login();
             int player = 2; // Player 1 starts
             int input = 0;
             bool inputCorrect = true;
@@ -131,7 +131,7 @@ namespace GmaingXO
 
                 do
                 {
-                    Logain();
+                  login();
                     Console.WriteLine("\nplayer {0} : Choose your Filed : ", player);
 
                     try
